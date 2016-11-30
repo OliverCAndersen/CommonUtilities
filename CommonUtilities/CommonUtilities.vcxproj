@@ -117,7 +117,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CU\InputManager.h" />
+    <ClInclude Include="CU\Line.h" />
+    <ClInclude Include="CU\LineVolume.h" />
     <ClInclude Include="CU\Math.h" />
+    <ClInclude Include="CU\Plane.h" />
+    <ClInclude Include="CU\PlaneVolume.h" />
     <ClInclude Include="CU\StaticArray.h" />
     <ClInclude Include="CU\Timer.h" />
     <ClInclude Include="CU\Vector.h" />

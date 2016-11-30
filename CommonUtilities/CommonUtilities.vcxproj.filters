@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Lines and Planes">
+      <UniqueIdentifier>{8a38b973-fbc1-4398-a2bc-22f1e4edf515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Containers">
+      <UniqueIdentifier>{76a56280-c29f-4af2-a757-0cfc590625c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vectors">
+      <UniqueIdentifier>{5af9ec36-9eb0-4ddb-a0c3-e7b56cb19fcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Misc">
+      <UniqueIdentifier>{2b1ef57b-52ac-45af-a35d-aeca0be35ead}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CU\InputManager.cpp">
@@ -32,26 +44,38 @@
     <ClInclude Include="CU\Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CU\Vector.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="CU\LineVolume.h">
+      <Filter>Header Files\Lines and Planes</Filter>
     </ClInclude>
-    <ClInclude Include="CU\Vector2.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="CU\Line.h">
+      <Filter>Header Files\Lines and Planes</Filter>
     </ClInclude>
-    <ClInclude Include="CU\Vector3.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="CU\Plane.h">
+      <Filter>Header Files\Lines and Planes</Filter>
     </ClInclude>
-    <ClInclude Include="CU\Vector4.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="CU\PlaneVolume.h">
+      <Filter>Header Files\Lines and Planes</Filter>
     </ClInclude>
     <ClInclude Include="CU\StaticArray.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Containers</Filter>
     </ClInclude>
     <ClInclude Include="CU\VectorOnStack.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\Vector4.h">
+      <Filter>Header Files\Vectors</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\Vector.h">
+      <Filter>Header Files\Vectors</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\Vector2.h">
+      <Filter>Header Files\Vectors</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\Vector3.h">
+      <Filter>Header Files\Vectors</Filter>
     </ClInclude>
     <ClInclude Include="Macros.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Misc</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
