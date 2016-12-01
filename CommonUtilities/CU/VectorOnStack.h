@@ -44,7 +44,7 @@ namespace CommonUtilities
 	template<typename Type, int capacity, typename CountType, bool useSafeMode>
 	inline VectorOnStack<Type, capacity, CountType, useSafeMode>::VectorOnStack()
 	{
-		mySize = 0;
+		mySize = static_cast<CountType>(0);
 	}
 
 	template<typename Type, int capacity, typename CountType, bool useSafeMode>
