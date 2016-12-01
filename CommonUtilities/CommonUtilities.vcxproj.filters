@@ -77,5 +77,8 @@
     <ClInclude Include="Macros.h">
       <Filter>Header Files\Misc</Filter>
     </ClInclude>
+    <ClInclude Include="CU\GrowingArray.h">
+      <Filter>Header Files\Containers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

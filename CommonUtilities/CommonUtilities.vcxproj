@@ -116,6 +116,7 @@
     <ClCompile Include="CU\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CU\GrowingArray.h" />
     <ClInclude Include="CU\InputManager.h" />
     <ClInclude Include="CU\Line.h" />
     <ClInclude Include="CU\LineVolume.h" />
