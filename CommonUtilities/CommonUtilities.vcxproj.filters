@@ -80,5 +80,14 @@
     <ClInclude Include="CU\GrowingArray.h">
       <Filter>Header Files\Containers</Filter>
     </ClInclude>
+    <ClInclude Include="CU\Matrix44.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\Matrix33.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\Matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
