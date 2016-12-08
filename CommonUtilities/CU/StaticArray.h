@@ -81,7 +81,7 @@ namespace CommonUtilities
 	{
 		for (int i = size - 1; i >= 0; --i)
 		{
-			SAFEDELETE(myData[i]);
+			SAFE_DELETE(myData[i]);
 		}
 	}
 }

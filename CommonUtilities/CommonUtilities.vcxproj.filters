@@ -25,12 +25,24 @@
     <Filter Include="Header Files\Misc">
       <UniqueIdentifier>{2b1ef57b-52ac-45af-a35d-aeca0be35ead}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Debug">
+      <UniqueIdentifier>{c30cdc97-4654-4399-ab9b-2361af8b8827}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CU\InputManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CU\Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CU\DL_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CU\DL_StackWalker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CU\StackWalker\StackWalker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,9 +86,6 @@
     <ClInclude Include="CU\Vector3.h">
       <Filter>Header Files\Vectors</Filter>
     </ClInclude>
-    <ClInclude Include="Macros.h">
-      <Filter>Header Files\Misc</Filter>
-    </ClInclude>
     <ClInclude Include="CU\GrowingArray.h">
       <Filter>Header Files\Containers</Filter>
     </ClInclude>
@@ -88,6 +97,18 @@
     </ClInclude>
     <ClInclude Include="CU\Matrix.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\Macros.h">
+      <Filter>Header Files\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\DL_StackWalker.h">
+      <Filter>Header Files\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\StackWalker\StackWalker.h">
+      <Filter>Header Files\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\DL_Debug.h">
+      <Filter>Header Files\Debug</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

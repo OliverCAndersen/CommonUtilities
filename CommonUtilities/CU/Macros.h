@@ -1,3 +1,3 @@
 #pragma once
 
-#define SAFEDELETE(p) delete p; p = nullptr;
+#define SAFE_DELETE(p) delete p; p = nullptr;

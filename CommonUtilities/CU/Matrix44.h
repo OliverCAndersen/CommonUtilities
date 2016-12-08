@@ -58,9 +58,9 @@ namespace CommonUtilities
 		T cosOfAngle = cos(aAngleInRadians);
 		T sinOfAngle = sin(aAngleInRadians);
 		Matrix44<T> xRotationMatrix = { static_cast<T>(1), static_cast<T>(0), static_cast<T>(0), static_cast<T>(0),
-			static_cast<T>(0), cosOfAngle, -sinOfAngle, static_cast<T>(0),
-			static_cast<T>(0), sinOfAngle, cosOfAngle, static_cast<T>(0),
-			static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(1) };
+										static_cast<T>(0), cosOfAngle, sinOfAngle, static_cast<T>(0),
+										static_cast<T>(0), -sinOfAngle, cosOfAngle, static_cast<T>(0),
+										static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(1) };
 
 		return xRotationMatrix;
 	}
@@ -70,9 +70,9 @@ namespace CommonUtilities
 	{
 		T cosOfAngle = cos(aAngleInRadians);
 		T sinOfAngle = sin(aAngleInRadians);
-		Matrix44<T> yRotationMatrix = { cosOfAngle, static_cast<T>(0), sinOfAngle, static_cast<T>(0),
+		Matrix44<T> yRotationMatrix = { cosOfAngle, static_cast<T>(0), -sinOfAngle, static_cast<T>(0),
 										static_cast<T>(0), static_cast<T>(1), static_cast<T>(0), static_cast<T>(0),
-										-sinOfAngle, static_cast<T>(0), cosOfAngle, static_cast<T>(0),
+										sinOfAngle, static_cast<T>(0), cosOfAngle, static_cast<T>(0),
 										static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(1) };
 
 		return yRotationMatrix;
@@ -83,8 +83,8 @@ namespace CommonUtilities
 	{
 		T cosOfAngle = cos(aAngleInRadians);
 		T sinOfAngle = sin(aAngleInRadians);
-		Matrix44<T> zRotationMatrix = { cosOfAngle, -sinOfAngle, static_cast<T>(0), static_cast<T>(0),
-										sinOfAngle, cosOfAngle, static_cast<T>(0), static_cast<T>(0),
+		Matrix44<T> zRotationMatrix = { cosOfAngle, sinOfAngle, static_cast<T>(0), static_cast<T>(0),
+										-sinOfAngle, cosOfAngle, static_cast<T>(0), static_cast<T>(0),
 										static_cast<T>(0), static_cast<T>(0), static_cast<T>(1), static_cast<T>(0),
 										static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(1) };
 

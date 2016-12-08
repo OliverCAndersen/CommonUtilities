@@ -218,7 +218,7 @@ namespace CommonUtilities
 		{
 			if (myData[i] == aObject)
 			{
-				SAFEDELETE(myData[i]);
+				SAFE_DELETE(myData[i]);
 
 				myData[i] = myData[mySize - 1];
 
@@ -234,7 +234,7 @@ namespace CommonUtilities
 		assert(myData != nullptr && "GrowingArray is not initialised yet.");
 		assert((aIndex >= static_cast<CountType>(0) && aIndex < mySize) && "Index out of range.");
 
-		SAFEDELETE(myData[aIndex]);
+		SAFE_DELETE(myData[aIndex]);
 
 		myData[aIndex] = myData[mySize - 1];
 
@@ -311,7 +311,7 @@ namespace CommonUtilities
 		assert(myData != nullptr && "GrowingArray is not initialised yet.");
 		for (CountType i = 0; i < mySize; ++i)
 		{
-			SAFEDELETE(myData[i]);
+			SAFE_DELETE(myData[i]);
 		}
 		mySize = static_cast<CountType>(0);
 	}

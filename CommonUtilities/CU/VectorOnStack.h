@@ -125,7 +125,7 @@ namespace CommonUtilities
 		{
 			if (myData[i] == aObject)
 			{
-				SAFEDELETE(myData[i]);
+				SAFE_DELETE(myData[i]);
 
 				myData[i] = myData[mySize - 1];
 
@@ -142,7 +142,7 @@ namespace CommonUtilities
 	{
 		assert((aIndex >= 0 && aIndex <= mySize - 1) && "Index out of range.");
 
-		SAFEDELETE(myData[aIndex]);
+		SAFE_DELETE(myData[aIndex]);
 
 		myData[aIndex] = myData[mySize - 1];
 
@@ -186,7 +186,7 @@ namespace CommonUtilities
 	{
 		for (CountType i = 0; i < mySize; ++i)
 		{
-			SAFEDELETE(myData[i]);
+			SAFE_DELETE(myData[i]);
 		}
 
 		mySize = 0;
