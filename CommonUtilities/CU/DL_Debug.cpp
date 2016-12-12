@@ -8,12 +8,13 @@
 
 namespace DL_Debug
 {
-	Debug* Debug::ourInstance;
+	Debug* Debug::ourInstance = nullptr;
 	std::ofstream Debug::ourDebugFile;
 
 	Debug::Debug(std::string aFileName)
 	{
 		ourDebugFile.open(aFileName);
+		assert((ourDebugFile.is_open()) && "Failed to open or create the debug file.");
 	}
 	Debug::~Debug()
 	{

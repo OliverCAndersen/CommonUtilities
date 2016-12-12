@@ -1,6 +1,1 @@
-﻿  StackWalker.cpp
-c:\users\stadan2\documents\oliver andersens files\visual studio 2015\projects\commonutilities\commonutilities\commonutilities\cu\stackwalker\stackwalker.h(118): warning C4091: 'typedef ': ignored on left of 'BaseStackWalker::CallstackEntryType' when no variable is declared
-c:\program files (x86)\windows kits\8.1\include\um\dbghelp.h(1544): warning C4091: 'typedef ': ignored on left of '' when no variable is declared
-c:\program files (x86)\windows kits\8.1\include\um\dbghelp.h(3190): warning C4091: 'typedef ': ignored on left of '' when no variable is declared
-c:\users\stadan2\documents\oliver andersens files\visual studio 2015\projects\commonutilities\commonutilities\commonutilities\cu\stackwalker\stackwalker.cpp(357): warning C4091: 'typedef ': ignored on left of 'StackWalkerInternal::IMAGEHLP_MODULE64_V2' when no variable is declared
-  CommonUtilities.vcxproj -> C:\Users\stadan2\Documents\Oliver Andersens Files\Visual Studio 2015\Projects\CommonUtilities\Debug\CommonUtilities.lib
+﻿  CommonUtilities.vcxproj -> C:\Users\stadan2\Documents\Oliver Andersens Files\Visual Studio 2015\Projects\CommonUtilities\Debug\CommonUtilities.lib

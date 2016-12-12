@@ -110,5 +110,8 @@
     <ClInclude Include="CU\DL_Debug.h">
       <Filter>Header Files\Debug</Filter>
     </ClInclude>
+    <ClInclude Include="CU\ContainerMisc.h">
+      <Filter>Header Files\Containers</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

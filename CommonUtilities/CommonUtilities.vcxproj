@@ -119,6 +119,7 @@
     <ClCompile Include="CU\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CU\ContainerMisc.h" />
     <ClInclude Include="CU\DL_Debug.h" />
     <ClInclude Include="CU\DL_StackWalker.h" />
     <ClInclude Include="CU\GrowingArray.h" />
