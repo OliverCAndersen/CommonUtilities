@@ -28,6 +28,9 @@
     <Filter Include="Header Files\Debug">
       <UniqueIdentifier>{c30cdc97-4654-4399-ab9b-2361af8b8827}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Matrix">
+      <UniqueIdentifier>{4df3e8c1-e281-4f00-a32f-0b09460bffe0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CU\InputManager.cpp">
@@ -89,15 +92,6 @@
     <ClInclude Include="CU\GrowingArray.h">
       <Filter>Header Files\Containers</Filter>
     </ClInclude>
-    <ClInclude Include="CU\Matrix44.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CU\Matrix33.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CU\Matrix.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CU\Macros.h">
       <Filter>Header Files\Misc</Filter>
     </ClInclude>
@@ -112,6 +106,15 @@
     </ClInclude>
     <ClInclude Include="CU\ContainerMisc.h">
       <Filter>Header Files\Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\Matrix.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\Matrix33.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="CU\Matrix44.h">
+      <Filter>Header Files\Matrix</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

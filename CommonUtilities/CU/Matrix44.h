@@ -18,10 +18,13 @@ namespace CommonUtilities
 		static Matrix44<T> CreateRotateAroundY(T aAngleInRadians);
 		static Matrix44<T> CreateRotateAroundZ(T aAngleInRadians);
 
+		const Vector4<T>& GetPosition() const;
+
 		static Matrix44<T> Transpose(const Matrix44<T>& aMatrixToTranspose);
 
-		std::array<T, 16> myMatrix;
+		static Matrix44<T> GetFastInverse(const Matrix44<T>& aRotAndTransMatrix);
 
+		std::array<T, 16> myMatrix;
 
 		inline Matrix44<T> & Matrix44<T>::operator=(const Matrix44<T>& aMatrix);
 		inline T& operator[](const int & aIndex);
@@ -92,6 +95,12 @@ namespace CommonUtilities
 	}
 
 	template<class T>
+	inline const Vector4<T>& Matrix44<T>::GetPosition() const
+	{
+		return{ myMatrix[12], myMatrix[13], myMatrix[14], 1 };
+	}
+
+	template<class T>
 	inline Matrix44<T> Matrix44<T>::Transpose(const Matrix44<T>& aMatrixToTranspose)
 	{
 		Matrix44<T> transposedMatrix;
@@ -117,6 +126,34 @@ namespace CommonUtilities
 		transposedMatrix[15] = aMatrixToTranspose[15];
 
 		return transposedMatrix;
+	}
+
+	template<class T>
+	inline Matrix44<T> Matrix44<T>::GetFastInverse(const Matrix44<T>& aRotAndTransMatrix)
+	{
+		Matrix44<T> inversedMatrix;
+
+		inversedMatrix[0] = aRotAndTransMatrix[0];
+		inversedMatrix[1] = aRotAndTransMatrix[4];
+		inversedMatrix[2] = aRotAndTransMatrix[8];
+		inversedMatrix[3] = aRotAndTransMatrix[3];
+
+		inversedMatrix[4] = aRotAndTransMatrix[1];
+		inversedMatrix[5] = aRotAndTransMatrix[5];
+		inversedMatrix[6] = aRotAndTransMatrix[9];
+		inversedMatrix[7] = aRotAndTransMatrix[7];
+
+		inversedMatrix[8] = aRotAndTransMatrix[2];
+		inversedMatrix[9] = aRotAndTransMatrix[6];
+		inversedMatrix[10] = aRotAndTransMatrix[10];
+		inversedMatrix[11] = aRotAndTransMatrix[11];
+
+		inversedMatrix[12] = (-aRotAndTransMatrix[12] * inversedMatrix[0]) + (-aRotAndTransMatrix[13] * inversedMatrix[4]) + (-aRotAndTransMatrix[14] * inversedMatrix[8]);
+		inversedMatrix[13] = (-aRotAndTransMatrix[12] * inversedMatrix[1]) + (-aRotAndTransMatrix[13] * inversedMatrix[5]) + (-aRotAndTransMatrix[14] * inversedMatrix[9]);
+		inversedMatrix[14] = (-aRotAndTransMatrix[12] * inversedMatrix[2]) + (-aRotAndTransMatrix[13] * inversedMatrix[6]) + (-aRotAndTransMatrix[14] * inversedMatrix[10]);
+		inversedMatrix[15] = aRotAndTransMatrix[15];
+
+		return inversedMatrix;
 	}
 
 	template<class T>
@@ -188,13 +225,11 @@ namespace CommonUtilities
 	template<class T>
 	inline Vector4<T> operator*(const Vector4<T>& aVector, const Matrix44<T>& aMatrix)
 	{
-		const std::array<T, 16> & matrix = aMatrix.myMatrix;
-
 		Vector4<T> result;
-		result.x = (aVector.x * matrix[0]) + (aVector.y * matrix[4]) + (aVector.z * matrix[8]) + (aVector.w * matrix[12]);
-		result.y = (aVector.x * matrix[1]) + (aVector.y * matrix[5]) + (aVector.z * matrix[9]) + (aVector.w * matrix[13]);
-		result.z = (aVector.x * matrix[2]) + (aVector.y * matrix[6]) + (aVector.z * matrix[10]) + (aVector.w * matrix[14]);
-		result.w = (aVector.x * matrix[3]) + (aVector.y * matrix[7]) + (aVector.z * matrix[11]) + (aVector.w * matrix[15]);
+		result.x = (aVector.x * aMatrix[0]) + (aVector.y * aMatrix[4]) + (aVector.z * aMatrix[8]) + (aVector.w * aMatrix[12]);
+		result.y = (aVector.x * aMatrix[1]) + (aVector.y * aMatrix[5]) + (aVector.z * aMatrix[9]) + (aVector.w * aMatrix[13]);
+		result.z = (aVector.x * aMatrix[2]) + (aVector.y * aMatrix[6]) + (aVector.z * aMatrix[10]) + (aVector.w * aMatrix[14]);
+		result.w = (aVector.x * aMatrix[3]) + (aVector.y * aMatrix[7]) + (aVector.z * aMatrix[11]) + (aVector.w * aMatrix[15]);
 
 		return result;
 	}

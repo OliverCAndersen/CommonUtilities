@@ -47,6 +47,11 @@ public:
 		return Vector3<T>(aVector0.x - aVector1.x, aVector0.y - aVector1.y, aVector0.z - aVector1.z);
 	}
 
+	template <class T> Vector3<T> operator-(const Vector3<T>& aVector)
+	{
+		return Vector3<T>(-aVector.x, -aVector.y, -aVector.z);
+	}
+
 	template <class T> Vector3<T> operator*(const Vector3<T>& aVector, const T& aScalar) 
 	{
 		return Vector3<T>(aVector.x * aScalar, aVector.y * aScalar, aVector.z * aScalar);
