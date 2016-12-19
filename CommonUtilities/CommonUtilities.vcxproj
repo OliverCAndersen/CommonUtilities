@@ -44,7 +44,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -112,6 +112,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CU\DirectionalLight.cpp" />
     <ClCompile Include="CU\DL_Debug.cpp" />
     <ClCompile Include="CU\DL_StackWalker.cpp" />
     <ClCompile Include="CU\InputManager.cpp" />
@@ -120,6 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CU\ContainerMisc.h" />
+    <ClInclude Include="CU\DirectionalLight.h" />
     <ClInclude Include="CU\DL_Debug.h" />
     <ClInclude Include="CU\DL_StackWalker.h" />
     <ClInclude Include="CU\GrowingArray.h" />

@@ -35,6 +35,8 @@ public:
 	T Dot(const Vector3<T>& aVector) const;
 
 	Vector3<T> Cross(const Vector3<T>& aVector) const;
+
+	Vector3<T> PointwiseProduct(const Vector3<T> & aVector) const;
 };
 
 	template <class T> Vector3<T> operator+(const Vector3<T>& aVector0, const Vector3<T>& aVector1) 
@@ -156,6 +158,11 @@ public:
 		crossProduct.y = (z * aVector.x) - (x * aVector.z);
 		crossProduct.z = (x * aVector.y) - (y * aVector.x);
 		return crossProduct;
+	}
+	template<class T>
+	inline Vector3<T> Vector3<T>::PointwiseProduct(const Vector3<T>& aVector) const
+	{
+		return { x * aVector.x, y * aVector.y, z * aVector.z };
 	}
 }
 

@@ -1,0 +1,3 @@
+﻿  DL_Debug.cpp
+c:\users\stadan2\documents\oliver andersens files\visual studio 2015\projects\labbar\linjär algebra\potatoworld - tga2d\source\commonutilities\commonutilities\cu\StackWalker\StackWalker.h(118): warning C4091: 'typedef ': ignored on left of 'BaseStackWalker::CallstackEntryType' when no variable is declared
+  CommonUtilities.vcxproj -> C:\Users\stadan2\Documents\Oliver Andersens Files\Visual Studio 2015\Projects\Labbar\Linjär Algebra\PotatoWorld - TGA2D\Source\x64\Release\CommonUtilities.lib
