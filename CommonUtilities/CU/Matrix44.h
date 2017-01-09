@@ -18,6 +18,8 @@ namespace CommonUtilities
 		static Matrix44<T> CreateRotateAroundY(T aAngleInRadians);
 		static Matrix44<T> CreateRotateAroundZ(T aAngleInRadians);
 
+		void SetPosition(T aX, T aY, T aZ);
+		void SetPosition(const Vector4<T>& aPosition);
 		const Vector4<T>& GetPosition() const;
 
 		static Matrix44<T> Transpose(const Matrix44<T>& aMatrixToTranspose);
@@ -92,6 +94,22 @@ namespace CommonUtilities
 										static_cast<T>(0), static_cast<T>(0), static_cast<T>(0), static_cast<T>(1) };
 
 		return zRotationMatrix;
+	}
+
+	template<class T>
+	inline void Matrix44<T>::SetPosition(T aX, T aY, T aZ)
+	{
+		myMatrix[12] = aX;
+		myMatrix[13] = aY;
+		myMatrix[14] = aZ;
+	}
+
+	template<class T>
+	inline void Matrix44<T>::SetPosition(const Vector4<T>& aPosition)
+	{
+		myMatrix[12] = aPosition.x;
+		myMatrix[13] = aPosition.y;
+		myMatrix[14] = aPosition.z;
 	}
 
 	template<class T>
